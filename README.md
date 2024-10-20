@@ -65,10 +65,11 @@
 
 # Service Test
 
-    Assertions
+    Assertions.assertEquals
     값을 검증합니다.
 
     any()
+    메소드의 실행만을 확인하거나, 클래스 객체를 매개변수로 전달받을때 사용합니다.
 
 # Repository Test
 
