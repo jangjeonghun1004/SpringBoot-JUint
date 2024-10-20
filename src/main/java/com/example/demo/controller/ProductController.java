@@ -3,13 +3,11 @@ package com.example.demo.controller;
 import com.example.demo.dto.ProductCreateDTO;
 import com.example.demo.dto.ProductDTO;
 import com.example.demo.service.ProductService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@Slf4j
 @RequestMapping("/product")
 @RestController
 public class ProductController {

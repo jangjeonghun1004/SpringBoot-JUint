@@ -6,6 +6,12 @@
         <scope>test</scope>
     </dependency>
 
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.10.1</version>
+    </dependency>
+
 # JUnit 의 생명 주기
 
     @BeforeAll      최초 실행시 1회 실행
@@ -41,11 +47,54 @@
     perform()
     서버로 URL 요청을 보내는 것처럼 통신 테스트 코드를 작성해서 컨트롤러를 테스트 할 수 있다.
     MockMvc를 이용해서 가상의 MVC 환경을 설정한 후 실제 controller를 호출한다.
+        get()   = GET
+        post()  = POST
+            content()
+            contentType()
+        put()    = PUT
+        patch()  = PATCH
+        delete() = DELETE
 
-    andDo()
-    요청과 응답의 전체 내용을 출력합니다.
+        andDo(print())
+        요청과 응답의 전체 내용을 출력합니다.
 
     verify()
     지정된 메서드가 실행 되었는지 검증하는 역활을 합니다.
 
      * "ProductControllerTest.java" 코드를 참조하세요.
+
+# Service Test
+
+    Assertions
+    값을 검증합니다.
+
+    any()
+
+# Repository Test
+
+    @AutoConfigureTestDatabase
+    Replace.ANY : 임베디드 메모리 데이터베이스 사용
+    Replace.NONE: 애플리케이션 설정 데이터베이스 사용
+
+# @SpringBootTest
+
+    ProductRepositoryTestBySpringBootTest.java 참조하세요.
+
+# JaCoCo(Java Code Coverage)
+
+    Code Coverage는 소프트웨어의 테스트 수준이 충분한지를 표현하는 지표 중 하나입니다.
+    코드가 실행 되었는지 표현하는 방법으로도 사용된다.
+
+    <dependency>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.12</version>
+    </dependency>
+
+    <exclude> = 커버리지 측정 대상에서 제외
+    <plugins> 설정 정보는 pom.xml 참조하세요.
+
+# Code Coverage 실행
+![codecoverage.png](codecoverage.png)
+
+    

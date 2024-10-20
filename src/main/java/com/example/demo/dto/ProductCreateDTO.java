@@ -11,6 +11,4 @@ public class ProductCreateDTO {
     private String productName;
     private int productPrice;
     private int productStock;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
 }

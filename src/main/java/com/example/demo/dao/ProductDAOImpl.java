@@ -4,8 +4,6 @@ import com.example.demo.entity.Product;
 import com.example.demo.repository.ProductRepository;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
 @Component
 public class ProductDAOImpl implements ProductDAO {
     private final ProductRepository productRepository;
